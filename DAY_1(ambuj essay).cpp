@@ -18,10 +18,14 @@ int main() {
        int count=0,i;
        getline(cin,strs);
        // int l=strlen(strs);
-       for(i=0;strs[i]!='\0';i++)
+       for(i=1;strs[i]!='\0';i++)
        {
        	if(strs[i]==' ' || strs[i]==',' || strs[i]=='.' && strs[i+1]!='\0')
-       		count++;
+       	  {
+       	  	count++;
+       	  	while(strs[i]==' ' || strs[i]==',' || strs[i]=='.')
+       	  	 i++;
+       	  }
        }
        cout<<count+1;
 
